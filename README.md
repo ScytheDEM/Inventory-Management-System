@@ -1,40 +1,38 @@
-**Inventory Management System**
+# Inventory Management System
 
-**Description:**
-This project aims to develop a user-friendly inventory management system to help businesses efficiently manage their inventory. The system provides features such as tracking, settings management, and user authentication.
+Welcome to the completly redesigned inventory management system!
 
-**Features:**
-1. **Homepage:** Provides an overview of the inventory management system.
-2. **Tracking:** Allows users to track inventory items and their statuses.
-3. **Settings:** Enables users to customize system settings according to their preferences.
-4. **User Authentication:** Supports user login and signup functionalities.
+## Purpose
+The Inventory Management System is a web application designed to help businesses track their inventory efficiently. It allows users to manage various items in their inventory, including their type, image, and other relevant details. This system aims to streamline the inventory management process, making it easier for businesses to keep track of their stock levels and make informed decisions.
 
-**Files:**
-- `index.html`: Homepage of the inventory management system.
-- `tracking.html`: Page for tracking inventory items.
-- `settings.html`: Page for managing system settings.
-- `login.html`: Login page for user authentication.
-- `styles.css`: CSS file for styling the website.
-- `login.css`: CSS file for styling the login page.
-- `script.js`: JavaScript file for dynamic functionality.
-- `loading.js`: JavaScript file for handling loading animations.
+## Features
+- Track various items in the inventory
+- Store item details such as type, image, etc.
+- Easy-to-use interface for managing inventory
+- Flexible and customizable for different business needs
 
-**Instructions:**
-1. Open `index.html` to access the homepage of the inventory management system.
-2. Navigate to `tracking.html` to track inventory items.
-3. Access `settings.html` to manage system settings.
-4. Use `login.html` to log in to the system with your credentials.
+## Usage/Installation
+To use the Inventory Management System, follow these steps:
+1. Clone the repository to your local machine:
 
-**Setup:**
-- Clone the repository to your local machine.
-- Open the project folder in your preferred code editor.
-- Run the HTML files in your web browser to interact with the system.
+git clone https://github.com/yourusername/inventory-management-system.git
+(make sure to change the path to your username)
 
-**Dependencies:**
-- No external dependencies required. The project uses HTML, CSS, and JavaScript for development.
+2. Navigate to the project directory:
 
-**Contributors:**
-- alic lonsdale - Project Lead & Developer
+cd inventory-management-system
 
-**License:**
-This project is licensed under the [MIT License](LICENSE).
+3. Open the project in Visual Studio Code
+
+4. Launch a live server to view the application:
+- Install the Live Server extension in Visual Studio Code if you haven't already.
+- Right-click on the `index.html` file and select "Open with Live Server".
+
+
+## Author
+- Alic Lonsdale
+- Email: aliclonsdale@gmail.com
+
+
+## License
+This project is open source and available under the [MIT License](LICENSE).
