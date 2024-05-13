@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif; /* set the font family for the body */
+    margin: 0; /* remove margin */
+    padding: 0; /* remove padding */
+    background-color: #f0f0f0; /* background color for the body */
+}
+
+nav {
+    background-color: #f0f0f0; /* background color for the navigation bar */
+    border-radius: 20px; /* add border-radius for the curved design */
+    margin-bottom: 20px; /* add margin at the bottom */
+    overflow: hidden; /* prevents child elements from protruding */
+    padding: 10px; /* padding for the navigation bar */
+    position: fixed; /* fixed positioning so it stays visible when scrolling */
+    top: 10px; /* position the navigation bar 10px from the top */
+    left: 50%; /* position the navigation bar horizontally at the center */
+    transform: translateX(-50%); /* move the navigation bar back by half of its width */
+    width: calc(100% - 240px); /* adjust navigation bar width to accommodate sidebar */
+    z-index: 2; /* ensure navigation bar is above the sidebar */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* add a big shadow */
+    display: flex; /* add this line */
+    align-items: center; /* add this line */
+}
+
+#green-square {
+    position: absolute; /* position absolute for positioning within the navigation bar */
+    top: 0; /* position the green square at the top */
+    left: 0; /* position the green square at the left edge */
+    background-color: #4CAF50; /* green color for the branding */
+    width: 110px; /* width of the green square */
+    height: 100%; /* height of the navigation bar */
+    border-radius: 20px 0 0 20px; /* adjust border radius to match the navigation bar */
+    z-index: 1; /* ensure it's above the content */
+}
+
+nav ul {
+    list-style-type: none; /* remove the default list style */
+    margin: 0; /* remove margin */
+    padding: 0; /* remove padding */
+    display: flex; /* make the navigation items align horizontally */
+    margin-left: 120px; /* add margin to the left to move the navigation items past the green part */
+    align-items: center; /* add this line */
+    height: 100%; /* add this line */
+}
+
+nav ul li {
+    padding: 10px; /* add padding to the navigation items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* reset the margin for the first navigation item */
+}
+
+nav ul li a {
+    text-decoration: none; /* remove underline from links */
+    color: #555; /* text color */
+    display: flex; /* align text and icon horizontally */
+    align-items: center; /* center items vertically */
+    font-size: 13px; /* increase font size */
+    font-family: 'Roboto', sans-serif; /* change font to Roboto */
+    font-weight: 500; /* add some weight to the font */
+    position: relative; /* add this line */
+}
+
+.nav-button:hover::after {
+    content: ''; /* empty content */
+    position: absolute; /* position the pseudo-element absolutely */
+    top: 50%; /* position it at the vertical center */
+    left: 50%; /* position it at the horizontal center */
+    transform: translate(-50%, -50%); /* move it back by half of its width and height */
+    width: calc(100% + 20px); /* adjust width to cover the button with some padding */
+    height: calc(100% + 10px); /* adjust height to cover the button with some padding */
+    background-color: rgba(255, 255, 255, 0.2); /* transparent white background */
+    border-radius: 20px; /* rounded corners */
+    animation: glow 1s infinite alternate; /* animation for glowing effect */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 2px #4CAF50; /* initial glow color */
+    }
+    to {
+        box-shadow: 0 0 20px 6px #4CAF50; /* final glow color */
+    }
+}
+
+.auth-buttons {
+    margin-left: auto; /* push the buttons to the right */
+    padding-left: 1100px; /* add padding to the left */
+}
+
+#content {
+    padding: 20px; /* add padding */
+    margin-left: 240px; /* adjust content margin to accommodate sidebar */
+}
+
+.auth-buttons a {
+    color: #555; /* text color */
+    text-decoration: none; /* remove underline from links */
+    padding: 10px 20px; /* add padding */
+    border-radius: 20px; /* rounded corners */
+    background-color: #4CAF50; /* background color for the buttons */
+}
+
+.auth-buttons a:hover {
+    background-color: #45a049; /* background color on hover */
+}
+
+.sidebar {
+    background-color: rgb(60, 78, 178); /* sidebar color */
+    width: 220px; /* sidebar width */
+    height: calc(100vh - 10px); /* full height of the viewport minus 10px for the navigation bar */
+    position: fixed; /* fixed positioning so it stays visible when scrolling */
+    top: 0; /* position the sidebar at the top */
+    left: 0; /* position the sidebar at the left */
+    z-index: 1; /* ensure sidebar is behind the navigation bar */
+}
+
+.welcome-text {
+    text-align: center; /* center align the text */
+    margin-top: 200px; /* adjust the top margin to move the text down */
+    opacity: 0; /* initially hide the text */
+    animation: fadeIn 1s forwards; /* apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* end with opacity 1 */
+    }
+}
+
+.welcome-text h1 {
+    font-family: "Space Grotesk", sans-serif; /* use Space Grotesk font */
+    font-size: 36px; /* adjust the font size as needed */
+    color: #333; /* text color */
+    font-weight: bold; /* font weight */
+}
+
+.learn-more-button {
+    color: #555; /* text color */
+    text-decoration: none; /* remove underline from links */
+    padding: 10px 20px; /* add padding */
+    border-radius: 20px; /* rounded corners */
+    background-color: #4CAF50; /* background color for the button */
+    display: inline-block; /* display as inline block */
+    margin-top: 20px; /* add margin at the top */
+    transition: background-color 0.3s ease; /* add transition effect */
+}
+
+.learn-more-button:hover {
+    background-color: #45a049; /* background color on hover */
+}
+
+.learn-more-button i {
+    margin-left: 5px; /* add spacing between text and arrow icon */
+}

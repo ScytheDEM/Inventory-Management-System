@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- sets the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets the viewport properties for responsive design -->
+    <title>Inventory Management System</title>
+    <!-- sets the title of the webpage -->
+    <link rel="stylesheet" href="home.css" />
+    <!-- links the home.css file for styling -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- include sidebar CSS -->
+    <link rel="stylesheet" href="sidebar.css" />
+    <!-- links the sidebar.css file for styling -->
+    <!-- Space Grotesk Font -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    />
+  </head>
+  <body>
+    <!-- sidebar -->
+    <div class="sidebar">
+      <!-- sidebar content goes here -->
+    </div>
+
+    <!-- navigation bar -->
+    <nav>
+      <div id="green-square"></div>
+      <!-- creates a green square element -->
+      <ul>
+        <li>
+          <a href="#" id="home" class="nav-button"
+            ><i class="fas fa-home icon"></i>home</a
+          >
+          <!-- creates a navigation link for the home page with a home icon -->
+        </li>
+        <li>
+          <a href="#" id="tracking" class="nav-button"
+            ><i class="fas fa-chart-line icon"></i>tracking</a
+          >
+          <!-- creates a navigation link for the tracking page with a chart icon -->
+        </li>
+        <li>
+          <a href="#" id="settings" class="nav-button"
+            ><i class="fas fa-cog icon"></i>settings</a
+          >
+          <!-- creates a navigation link for the settings page with a cog icon -->
+        </li>
+        <li class="auth-buttons">
+          <a href="#" id="signup" class="nav-button">sign up</a>
+          <!-- creates a navigation link for the sign up page -->
+        </li>
+      </ul>
+    </nav>
+
+    <!-- content -->
+    <div id="content">
+      <div class="welcome-text">
+        <h1>Welcome to the future of inventory tracking</h1>
+        <!-- displays a welcome message -->
+        <a href="#" class="learn-more-button">
+          learn more <i class="fas fa-arrow-right"></i>
+          <!-- creates a "learn more" button with a right arrow icon -->
+        </a>
+      </div>
+    </div>
+
+    <script src="home.js"></script>
+    <!-- links the home.js file for JavaScript functionality -->
+  </body>
+</html>

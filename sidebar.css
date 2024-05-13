@@ -1,0 +1,9 @@
+.sidebar {
+    background-color: rgb(60, 78, 178); /* sidebar colour */
+    width: 220px; /* sidebar width */
+    height: calc(100vh - 10px); /* full height of the viewport minus 10px for the navigation bar */
+    position: fixed; /* fixed positioning so it stays visible when scrolling */
+    top: 0; /* position the sidebar at the top */
+    left: 0;
+    z-index: 1; /* ensure sidebar is behind the navigation bar */
+}
