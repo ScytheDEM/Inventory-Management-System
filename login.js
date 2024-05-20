@@ -1,31 +1,37 @@
 // login.js
-document.addEventListener('DOMContentLoaded', function () {
-    const loginForm = document.getElementById('login-form');
 
-    loginForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission
-        
-        // Get username and password from form
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
-
-        // Example database of users (Replace with your own)
-        const users = [
-            { username: 'user1', password: 'password1' },
-            { username: 'user2', password: 'password2' }
-            // Add more users as needed
-        ];
-
-        // Check if user exists in the database
-        const user = users.find(user => user.username === username && user.password === password);
-
-        if (user) {
-            // User found, set logged-in status and redirect to homepage
-            localStorage.setItem('loggedInUser', JSON.stringify(user));
-            window.location.href = 'index.html'; // Redirect to homepage
+async function handleLoginFormSubmit(event) {
+    event.preventDefault();
+  
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+  
+    const logins = fetchLogins();
+    const isValid = logins.some(([storedUsername, storedPassword]) =>
+        storedUsername.trim() === username.trim() &&
+        storedPassword.trim() === password.trim()
+    );
+  
+    if (isValid) {
+        alert('Login successful!');
+        localStorage.setItem('isLoggedIn', 'true');
+        localStorage.setItem('username', username);
+  
+        // Redirect to home.html after a slight delay
+        setTimeout(() => {
+            window.location.href = 'home.html';
+        }, 100); // Adjust delay as needed (in milliseconds)
+    } else {
+        const userExists = logins.some(([storedUsername]) => storedUsername.trim() === username.trim());
+  
+        if (!userExists) {
+            const createAccount = confirm("The user has not been detected. Do you want to create a new user?");
+            if (createAccount) {
+                addNewUser(username);
+                alert('Account created successfully with default password "123". Please log in with your new credentials.');
+            }
         } else {
-            // Display error message or handle invalid login
-            alert('Invalid username or password');
+            alert('Invalid username or password!');
         }
-    });
-});
+    }
+}

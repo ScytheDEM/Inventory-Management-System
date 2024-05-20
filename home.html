@@ -1,23 +1,29 @@
+<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Set the character encoding for the document -->
     <meta charset="UTF-8" />
-    <!-- sets the character encoding for the document -->
+    <!-- Set the viewport to control the layout on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- sets the viewport properties for responsive design -->
-    <title>Inventory Management System</title>
-    <!-- sets the title of the webpage -->
+    <!-- Set the favicon for the website -->
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="home-setting/Testing Files/website-icon.png"
+    />
+    <!-- Set the title of the webpage -->
+    <title>Invtrack</title>
+    <!-- Link the CSS file for styling -->
     <link rel="stylesheet" href="home.css" />
-    <!-- links the home.css file for styling -->
-    <!-- Font Awesome CDN -->
+    <!-- Link the Font Awesome CSS file for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- include sidebar CSS -->
+    <!-- Link the sidebar CSS file for styling -->
     <link rel="stylesheet" href="sidebar.css" />
-    <!-- links the sidebar.css file for styling -->
-    <!-- Space Grotesk Font -->
+    <!-- Link the Google Fonts CSS file for custom fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
@@ -31,30 +37,33 @@
 
     <!-- navigation bar -->
     <nav>
+      <!-- Create a green square element -->
       <div id="green-square"></div>
-      <!-- creates a green square element -->
       <ul>
         <li>
-          <a href="#" id="home" class="nav-button"
-            ><i class="fas fa-home icon"></i>home</a
-          >
-          <!-- creates a navigation link for the home page with a home icon -->
+          <!-- Create a link for the home page with a home icon -->
+          <a href="#" id="home" class="nav-button">
+            <i class="fas fa-home icon"></i>home
+          </a>
         </li>
         <li>
-          <a href="#" id="tracking" class="nav-button"
-            ><i class="fas fa-chart-line icon"></i>tracking</a
-          >
-          <!-- creates a navigation link for the tracking page with a chart icon -->
+          <!-- Create a link for the tracking page with a chart line icon -->
+          <a href="#" id="tracking" class="nav-button">
+            <i class="fas fa-chart-line icon"></i>tracking
+          </a>
         </li>
         <li>
-          <a href="#" id="settings" class="nav-button"
-            ><i class="fas fa-cog icon"></i>settings</a
-          >
-          <!-- creates a navigation link for the settings page with a cog icon -->
+          <!-- Create a link for the settings page with a cog icon -->
+          <a href="#" id="settings" class="nav-button">
+            <i class="fas fa-cog icon"></i>settings
+          </a>
         </li>
+        <!-- Place the authentication buttons within the navigation bar -->
         <li class="auth-buttons">
-          <a href="#" id="signup" class="nav-button">sign up</a>
-          <!-- creates a navigation link for the sign up page -->
+          <span id="auth-status">
+            <!-- Create a link for signing in -->
+            <a id="signin" href="login.html" class="nav-button">Sign In</a>
+          </span>
         </li>
       </ul>
     </nav>
@@ -62,16 +71,16 @@
     <!-- content -->
     <div id="content">
       <div class="welcome-text">
+        <!-- Display a welcome message -->
         <h1>Welcome to the future of inventory tracking</h1>
-        <!-- displays a welcome message -->
-        <a href="#" class="learn-more-button">
+        <!-- Create a link to learn more with a right arrow icon -->
+        <a href="learnmore.html" class="learn-more-button">
           learn more <i class="fas fa-arrow-right"></i>
-          <!-- creates a "learn more" button with a right arrow icon -->
         </a>
       </div>
     </div>
 
+    <!-- Include the JavaScript file for the home page -->
     <script src="home.js"></script>
-    <!-- links the home.js file for JavaScript functionality -->
   </body>
 </html>

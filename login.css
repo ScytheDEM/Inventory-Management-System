@@ -8,6 +8,8 @@ body {
     align-items: center; /* Centers the items vertically within the body */
     height: 100vh; /* Makes the body cover the full height of the viewport */
     background-color: #ecf0f1; /* Sets the background color of the body */
+    font-family: 'Space Grotesk', sans-serif; /* Updated font family */
+
 }
 
 .login-container {
