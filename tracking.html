@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invtrack - Tracking</title>
+    <link rel="stylesheet" href="tracking.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="sidebar.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="sidebar"></div>
+
+    <nav>
+      <div id="green-square"></div>
+      <ul>
+        <li>
+          <a href="home.html" id="home" class="nav-button"
+            ><i class="fas fa-home icon"></i>home</a
+          >
+        </li>
+        <li>
+          <a href="tracking.html" id="tracking" class="nav-button"
+            ><i class="fas fa-chart-line icon"></i>tracking</a
+          >
+        </li>
+        <li>
+          <a href="settings.html" id="settings" class="nav-button"
+            ><i class="fas fa-cog icon"></i>settings</a
+          >
+        </li>
+        <li class="auth-buttons">
+          <span id="auth-status">
+            <a id="signin" href="login.html" class="nav-button">Sign In</a>
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <div class="tracking-content">
+        <h1>Inventory Tracking</h1>
+        <p>Track your inventory here.</p>
+
+        <form
+          id="inventory-form"
+          action="upload.php"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="item_name">Item Name:</label>
+          <input type="text" id="item_name" name="item_name" required />
+          <label for="item_image">Item Image:</label>
+          <input
+            type="file"
+            id="item_image"
+            name="item_image"
+            accept="image/*"
+            required
+          />
+          <button type="submit">Add Item</button>
+        </form>
+
+        <div id="inventory-list"></div>
+      </div>
+    </div>
+
+    <script src="tracking.js"></script>
+  </body>
+</html>

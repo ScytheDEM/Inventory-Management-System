@@ -1,86 +1,58 @@
-<!-- home.html -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Set the character encoding for the document -->
     <meta charset="UTF-8" />
-    <!-- Set the viewport to control the layout on different devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Set the favicon for the website -->
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="home-setting/Testing Files/website-icon.png"
-    />
-    <!-- Set the title of the webpage -->
     <title>Invtrack</title>
-    <!-- Link the CSS file for styling -->
     <link rel="stylesheet" href="home.css" />
-    <!-- Link the Font Awesome CSS file for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <!-- Link the sidebar CSS file for styling -->
     <link rel="stylesheet" href="sidebar.css" />
-    <!-- Link the Google Fonts CSS file for custom fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
     />
   </head>
   <body>
-    <!-- sidebar -->
-    <div class="sidebar">
-      <!-- sidebar content goes here -->
-    </div>
+    <div class="sidebar"></div>
 
-    <!-- navigation bar -->
     <nav>
-      <!-- Create a green square element -->
       <div id="green-square"></div>
       <ul>
         <li>
-          <!-- Create a link for the home page with a home icon -->
-          <a href="#" id="home" class="nav-button">
-            <i class="fas fa-home icon"></i>home
-          </a>
+          <a href="home.html" id="home" class="nav-button">
+            <i class="fas fa-home icon"></i>home</a
+          >
         </li>
         <li>
-          <!-- Create a link for the tracking page with a chart line icon -->
-          <a href="#" id="tracking" class="nav-button">
-            <i class="fas fa-chart-line icon"></i>tracking
-          </a>
+          <a href="tracking.html" id="tracking" class="nav-button">
+            <i class="fas fa-chart-line icon"></i>tracking</a
+          >
         </li>
         <li>
-          <!-- Create a link for the settings page with a cog icon -->
-          <a href="#" id="settings" class="nav-button">
-            <i class="fas fa-cog icon"></i>settings
-          </a>
+          <a href="settings.html" id="settings" class="nav-button">
+            <i class="fas fa-cog icon"></i>settings</a
+          >
         </li>
-        <!-- Place the authentication buttons within the navigation bar -->
         <li class="auth-buttons">
           <span id="auth-status">
-            <!-- Create a link for signing in -->
             <a id="signin" href="login.html" class="nav-button">Sign In</a>
           </span>
         </li>
       </ul>
     </nav>
 
-    <!-- content -->
     <div id="content">
       <div class="welcome-text">
-        <!-- Display a welcome message -->
         <h1>Welcome to the future of inventory tracking</h1>
-        <!-- Create a link to learn more with a right arrow icon -->
         <a href="learnmore.html" class="learn-more-button">
           learn more <i class="fas fa-arrow-right"></i>
         </a>
       </div>
     </div>
 
-    <!-- Include the JavaScript file for the home page -->
     <script src="home.js"></script>
   </body>
 </html>
