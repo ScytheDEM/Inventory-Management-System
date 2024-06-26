@@ -116,161 +116,108 @@ nav ul li a {
     z-index: 1;
 }
 
-.tracking-content {
-    text-align: center;
-    margin-top: 200px;
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.tracking-content h1 {
-    font-family: "Space Grotesk", sans-serif;
-    font-size: 36px;
-    color: #333;
-    font-weight: bold;
-}
-
-.tracking-content p {
-    color: #555;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-#inventory-form {
-    text-align: left;
-    margin: auto;
-    width: 50%;
-    padding: 20px;
+.inventory-form {
+    background-color: #f0f0f0;
     border-radius: 20px;
-    background: #f0f0f0;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 0 auto;
 }
 
-#inventory-form label {
-    font-weight: bold;
+.inventory-form h1 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.inventory-form label {
     display: block;
     margin-top: 10px;
+    font-weight: bold;
 }
 
-#inventory-form input[type="text"],
-#inventory-form input[type="file"],
-#inventory-form textarea {
-    width: 100%;
-    padding: 8px;
+.inventory-form input,
+.inventory-form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
     margin-top: 5px;
-    border-radius: 10px;
     border: none;
-    box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
+    border-radius: 10px;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Space Grotesk", sans-serif;
 }
 
-#inventory-form button {
-    margin-top: 20px;
+.inventory-form button {
+    margin-top: 10px;
     padding: 10px 20px;
     border: none;
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #4CAF50;
-    color: #fff;
+    color: white;
+    font-family: "Space Grotesk", sans-serif;
     cursor: pointer;
-    box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+    transition: background-color 0.3s ease;
 }
 
-#inventory-form button:hover {
+.inventory-form button:hover {
     background-color: #45a049;
 }
 
-#inventory-list {
+#inventoryList {
     margin-top: 20px;
-}
-
-.inventory-item {
-    background: #f0f0f0;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 20px 20px 60px #d9d9d9, -20px -20px 60px #ffffff;
-}
-
-.inventory-item h3 {
-    margin-top: 0;
-}
-
-.inventory-item img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
-}
-
-.inventory-item p {
-    font-size: 14px;
-    color: #555;
-    margin-top: 10px;
-}
-
-.inventory-item button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 10px;
-    background-color: #e74c3c;
-    color: #fff;
-    cursor: pointer;
-    box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
-}
-
-.inventory-item button:hover {
-    background-color: #c0392b;
-}
-
-/* Modal styles */
-.modal {
     display: flex;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
-.modal-content {
-    max-width: 90%;
-    max-height: 90%;
+.inventory-item {
+    background-color: #f0f0f0;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 25px;
-    color: #fff;
-    font-size: 35px;
-    font-weight: bold;
-    cursor: pointer;
+.inventory-item img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-.close-button:hover,
-.close-button:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+.inventory-item .item-details {
+    flex-grow: 1;
+    margin-left: 20px;
 }
 
-/* Thumbnail styles */
-.thumbnail {
-    max-width: 150px; /* Adjust the size as needed */
-    max-height: 150px;
+.inventory-item .item-details h2 {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
+.inventory-item .item-details p {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+.inventory-item button {
+    border: none;
+    background-color: #ff4c4c;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.inventory-item button:hover {
+    background-color: #e04444;
 }

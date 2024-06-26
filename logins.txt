@@ -1,5 +1,4 @@
-username1,password1
-username2,password2
-games,password1
-foodeatingfatty,password1
-grdtfyguhilgjfdfvdsfdhjulyjfdgfsghjkll,password1
+Alice Smith,alice,password456
+eating out,eats,eats
+Keira,Keira1,Keira
+John Pork,brainrot1,brainrot1
