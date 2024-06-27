@@ -2,43 +2,56 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- sets the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets the viewport properties for responsive design -->
     <title>Invtrack - Tracking</title>
+    <!-- sets the title of the webpage -->
     <link rel="stylesheet" href="tracking.css" />
+    <!-- links an external CSS file for styling -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- links an external CSS file for font icons -->
     <link rel="stylesheet" href="sidebar.css" />
+    <!-- links an external CSS file for sidebar styling -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
     />
+    <!-- links an external CSS file for custom fonts -->
   </head>
   <body>
     <div class="sidebar"></div>
+    <!-- creates a div element with class "sidebar" -->
 
     <nav>
       <div id="green-square"></div>
+      <!-- creates a div element with id "green-square" -->
       <ul>
         <li>
           <a href="home.html" id="home" class="nav-button"
             ><i class="fas fa-home icon"></i>home</a
           >
+          <!-- creates a link element with id "home" and class "nav-button" -->
         </li>
         <li>
           <a href="tracking.html" id="tracking" class="nav-button"
             ><i class="fas fa-chart-line icon"></i>tracking</a
           >
+          <!-- creates a link element with id "tracking" and class "nav-button" -->
         </li>
         <li>
           <a href="settings.html" id="settings" class="nav-button"
             ><i class="fas fa-cog icon"></i>settings</a
           >
+          <!-- creates a link element with id "settings" and class "nav-button" -->
         </li>
         <li class="auth-buttons">
           <span id="auth-status">
-            <a id="signin" href="login.html" class="nav-button">Sign In</a>
+            <a id="signin" href="login.html" class="nav-button">sign in</a>
+            <!-- creates a link element with id "signin" and class "nav-button" -->
           </span>
         </li>
       </ul>
@@ -47,10 +60,12 @@
     <div id="content">
       <div class="tracking-content">
         <h1>Inventory Tracking</h1>
+        <!-- creates a heading element with text "Inventory Tracking" -->
         <p>Track your inventory here.</p>
+        <!-- creates a paragraph element with text "Track your inventory here." -->
 
         <button id="export-button" disabled>Export Inventory</button>
-        <!-- Export button -->
+        <!-- creates a button element with id "export-button" and disabled attribute -->
 
         <form
           id="inventory-form"
@@ -58,9 +73,13 @@
           method="post"
           enctype="multipart/form-data"
         >
+          <!-- creates a form element with id "inventory-form" and attributes for form submission -->
           <label for="item_name">Item Name:</label>
+          <!-- creates a label element for an input field with id "item_name" -->
           <input type="text" id="item_name" name="item_name" required />
+          <!-- creates a text input field with id "item_name" and required attribute -->
           <label for="item_image">Item Image:</label>
+          <!-- creates a label element for a file input field with id "item_image" -->
           <input
             type="file"
             id="item_image"
@@ -68,15 +87,21 @@
             accept="image/*"
             required
           />
+          <!-- creates a file input field with id "item_image", accept attribute for image files, and required attribute -->
           <label for="item_note">Item Note:</label>
+          <!-- creates a label element for a textarea field with id "item_note" -->
           <textarea id="item_note" name="item_note" rows="4"></textarea>
+          <!-- creates a textarea field with id "item_note" and 4 rows -->
           <button type="submit">Add Item</button>
+          <!-- creates a submit button -->
         </form>
 
         <div id="inventory-list"></div>
+        <!-- creates a div element with id "inventory-list" -->
       </div>
     </div>
 
     <script src="tracking.js"></script>
+    <!-- includes an external JavaScript file -->
   </body>
 </html>

@@ -2,89 +2,151 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <!-- sets the character encoding for the document -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets the viewport properties for responsive design -->
     <link
       rel="icon"
       type="image/x-icon"
       href="home-setting/Testing Files/website-icon.png"
+      <!--
+      specifies
+      the
+      favicon
+      for
+      the
+      website
+      --
+    />
     />
     <title>Invtrack</title>
+    <!-- sets the title of the webpage -->
     <link rel="stylesheet" href="learnmore.css" />
+    <!-- links the external CSS file -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      <!--
+      links
+      the
+      Font
+      Awesome
+      CSS
+      file
+      --
+    />
     />
     <link rel="stylesheet" href="sidebar.css" />
+    <!-- links the sidebar CSS file -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+      <!--
+      links
+      the
+      Google
+      Fonts
+      CSS
+      file
+      --
+    />
     />
     <li class="auth-buttons">
+      <!-- starts a list item with class "auth-buttons" -->
       <span id="auth-status"></span>
+      <!-- creates a span element with id "auth-status" -->
     </li>
+    <!-- ends the list item -->
   </head>
   <body>
     <div class="sidebar">
       <!-- sidebar content goes here -->
     </div>
+    <!-- ends the sidebar div -->
 
     <nav>
       <div id="green-square"></div>
+      <!-- creates a div element with id "green-square" -->
       <ul>
+        <!-- starts an unordered list -->
         <li>
-          <a href="#" id="home" class="nav-button"
+          <a href="home.html" id="home" class="nav-button"
             ><i class="fas fa-home icon"></i>home</a
           >
+          <!-- creates a link with id "home" and class "nav-button" -->
         </li>
         <li>
-          <a href="#" id="tracking" class="nav-button"
+          <a href="tracking.html" id="tracking" class="nav-button"
             ><i class="fas fa-chart-line icon"></i>tracking</a
           >
+          <!-- creates a link with id "tracking" and class "nav-button" -->
         </li>
         <li>
           <a href="#" id="settings" class="nav-button"
             ><i class="fas fa-cog icon"></i>settings</a
           >
+          <!-- creates a link with id "settings" and class "nav-button" -->
         </li>
         <li class="auth-buttons">
+          <!-- starts a list item with class "auth-buttons" -->
           <a href="login.html" id="signup" class="nav-button">sign up</a>
+          <!-- creates a link with id "signup" and class "nav-button" -->
         </li>
+        <!-- ends the list item -->
       </ul>
+      <!-- ends the unordered list -->
     </nav>
+    <!-- ends the navigation section -->
 
     <div id="content">
       <div class="welcome-text">
         <h1>the only inventory manager that you'll ever need</h1>
+        <!-- creates a heading -->
         <p class="sub-text">hey, P.S, it's free.</p>
-        <img
-          src="home-setting/Testing Files/inventorymanager-promo.png"
-          class="fade-in-image"
-          alt="Image"
+        <!-- creates a paragraph with class "sub-text" -->
+        <img src="home-setting/Testing Files/inventorymanager-promo.png"
+        class="fade-in-image" alt="Image"
+        <!-- creates an image with class "fade-in-image" and alt text "Image" -->
         />
         <ul class="features-list">
+          <!-- starts an unordered list with class "features-list" -->
           <li class="feature-item">
-            Faster<span class="feature-details">
-              - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span
+            <!-- starts a list item with class "feature-item" -->
+            faster<span class="feature-details">
+              - Light weight design, speed won't be an issue ever again..</span
             >
+            <!-- adds text and a span element with class "feature-details" -->
           </li>
+          <!-- ends the list item -->
           <li class="feature-item">
-            Cross-Platform<span class="feature-details">
-              - Sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua.</span
+            <!-- starts a list item with class "feature-item" -->
+            cross-platform<span class="feature-details">
+              - Supported on all devices. Just a browser needed.</span
             >
+            <!-- adds text and a span element with class "feature-details" -->
           </li>
+          <!-- ends the list item -->
           <li class="feature-item">
-            Reliable<span class="feature-details">
-              - Ut enim ad minim veniam, quis nostrud exercitation ullamco
-              laboris nisi ut aliquip ex ea commodo consequat.</span
+            <!-- starts a list item with class "feature-item" -->
+            reliable<span class="feature-details">
+              - Able to be backed up to any serivce at just the touch of a
+              button.</span
             >
+            <!-- adds text and a span element with class "feature-details" -->
           </li>
+          <!-- ends the list item -->
         </ul>
+        <!-- ends the unordered list -->
       </div>
+      <!-- ends the welcome-text div -->
     </div>
+    <!-- ends the content div -->
 
     <script src="home.js"></script>
+    <!-- includes the home.js script -->
     <script src="login.js"></script>
+    <!-- includes the login.js script -->
     <script src="learnmore.js"></script>
+    <!-- includes the learnmore.js script -->
   </body>
 </html>

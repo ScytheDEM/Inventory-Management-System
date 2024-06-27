@@ -40,3 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+// this just checks if the crap is right

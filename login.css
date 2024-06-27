@@ -1,63 +1,62 @@
 /* login.css */
 
 body {
-    margin: 0; /* Sets the margin of the body element to 0 */
-    padding: 0; /* Sets the padding of the body element to 0 */
-    display: flex; /* Uses flexbox to align and distribute items horizontally */
-    justify-content: center; /* Centers the items horizontally within the body */
-    align-items: center; /* Centers the items vertically within the body */
-    height: 100vh; /* Makes the body cover the full height of the viewport */
-    background-color: #ecf0f1; /* Sets the background color of the body */
-    font-family: 'Space Grotesk', sans-serif; /* Updated font family */
-
+    margin: 0; /* sets the margin of the body element to 0 */
+    padding: 0; /* sets the padding of the body element to 0 */
+    display: flex; /* uses flexbox to align and distribute items horizontally */
+    justify-content: center; /* centers the items horizontally within the body */
+    align-items: center; /* centers the items vertically within the body */
+    height: 100vh; /* makes the body cover the full height of the viewport */
+    background-color: #ecf0f1; /* sets the background color of the body */
+    font-family: 'Space Grotesk', sans-serif; /* updated font family */
 }
 
 .login-container {
-    width: 80%; /* Sets the width of the login container to cover most of the viewport */
-    max-width: 500px; /* Sets the maximum width for the login container */
-    padding: 40px; /* Sets the padding inside the login container */
-    border-radius: 20px; /* Rounds the corners of the login container */
-    background-color: #ecf0f1; /* Sets the background color of the login container */
-    box-shadow: 5px 5px 10px #bdc3c7, -5px -5px 10px #ffffff; /* Applies a neumorphic box shadow effect to the login container */
+    width: 80%; /* sets the width of the login container to cover most of the viewport */
+    max-width: 500px; /* sets the maximum width for the login container */
+    padding: 40px; /* sets the padding inside the login container */
+    border-radius: 20px; /* rounds the corners of the login container */
+    background-color: #ecf0f1; /* sets the background color of the login container */
+    box-shadow: 5px 5px 10px #bdc3c7, -5px -5px 10px #ffffff; /* applies a neumorphic box shadow effect to the login container */
 }
 
 .neumorphic-form {
-    display: flex; /* Uses flexbox to align and distribute items horizontally */
-    flex-direction: column; /* Sets the direction of the flex items to be vertical */
-    align-items: center; /* Centers the items horizontally within the flex container */
+    display: flex; /* uses flexbox to align and distribute items horizontally */
+    flex-direction: column; /* sets the direction of the flex items to be vertical */
+    align-items: center; /* centers the items horizontally within the flex container */
 }
 
 .form-group {
-    margin-bottom: 20px; /* Sets the bottom margin of the form group */
+    margin-bottom: 20px; /* sets the bottom margin of the form group */
 }
 
 label {
-    font-weight: bold; /* Sets the font weight of the label element to bold */
+    font-weight: bold; /* sets the font weight of the label element to bold */
 }
 
 input[type="text"],
 input[type="password"] {
-    width: 100%; /* Sets the width of the input elements to 100% */
-    padding: 15px; /* Sets the padding inside the input elements */
-    border: none; /* Removes the border of the input elements */
-    border-radius: 10px; /* Rounds the corners of the input elements */
-    background-color: #ecf0f1; /* Sets the background color of the input elements */
-    box-shadow: inset 5px 5px 10px #bdc3c7, inset -5px -5px 10px #ffffff; /* Applies a neumorphic box shadow effect to the input elements */
+    width: 100%; /* sets the width of the input elements to 100% */
+    padding: 15px; /* sets the padding inside the input elements */
+    border: none; /* removes the border of the input elements */
+    border-radius: 10px; /* rounds the corners of the input elements */
+    background-color: #ecf0f1; /* sets the background color of the input elements */
+    box-shadow: inset 5px 5px 10px #bdc3c7, inset -5px -5px 10px #ffffff; /* applies a neumorphic box shadow effect to the input elements */
 }
 
 button {
-    padding: 15px 30px; /* Sets the padding inside the button */
-    border: none; /* Removes the border of the button */
-    border-radius: 10px; /* Rounds the corners of the button */
-    background-color: #ecf0f1; /* Sets the background color of the button */
-    box-shadow: 5px 5px 10px #bdc3c7, -5px -5px 10px #ffffff; /* Applies a neumorphic box shadow effect to the button */
-    cursor: pointer; /* Changes the cursor to a pointer when hovering over the button */
+    padding: 15px 30px; /* sets the padding inside the button */
+    border: none; /* removes the border of the button */
+    border-radius: 10px; /* rounds the corners of the button */
+    background-color: #ecf0f1; /* sets the background color of the button */
+    box-shadow: 5px 5px 10px #bdc3c7, -5px -5px 10px #ffffff; /* applies a neumorphic box shadow effect to the button */
+    cursor: pointer; /* changes the cursor to a pointer when hovering over the button */
 }
 
 button:hover {
-    transform: translateY(2px); /* Translates the button 2 pixels down when hovering over it */
+    transform: translateY(2px); /* translates the button 2 pixels down when hovering over it */
 }
 
 button:active {
-    transform: translateY(0); /* Resets the translation of the button when it is clicked */
+    transform: translateY(0); /* resets the translation of the button when it is clicked */
 }

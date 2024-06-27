@@ -1,129 +1,53 @@
 <?php
-session_start();
+session_start(); // start a new or resume an existing session
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $action = isset($_POST['action']) ? $_POST['action'] : '';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') { // check if the request method is POST
+    $username = $_POST['username']; // get the value of the 'username' field from the POST data
+    $password = $_POST['password']; // get the value of the 'password' field from the POST data
 
-    if ($action == 'register') {
-        // Registration action
-        $name = $_POST['name'];
-        $username = $_POST['username'];
-        $password = $_POST['password'];
+    $debugInfo = array(); // create an empty array to store debug information
 
-        $debugInfo = array();
+    // open the file
+    $file = fopen("logins.txt", "r"); // open the file named 'logins.txt' in read mode
 
-        // Open the file for both reading and writing
-        $file = fopen("logins.txt", "a+");
+    if ($file === false) { // check if there was an error opening the file
+        $debugInfo[] = "error opening the logins.txt file."; // add debug information
+        die(json_encode(array("status" => "error", "message" => "error opening the logins.txt file.", "debug" => $debugInfo))); // return an error response with debug information
+    }
 
-        if ($file === false) {
-            $debugInfo[] = "Error opening the logins.txt file.";
-            echo json_encode(array("status" => "error", "message" => "Error opening the logins.txt file.", "debug" => $debugInfo));
-            exit;
-        } else {
-            $debugInfo[] = "Opened logins.txt successfully.";
-        }
+    $loggedIn = false; // initialize a variable to track if the user is logged in
 
-        // Check if username already exists
-        $userExists = false;
-        while (($line = fgets($file)) !== false) {
-            list($storedName, $storedUsername, $storedPassword) = explode(",", trim($line));
-            if ($username == $storedUsername) {
-                $userExists = true;
-                $debugInfo[] = "Username '$username' already exists.";
-                break;
-            }
-        }
-
-        if ($userExists) {
-            echo json_encode(array(
-                "status" => "error",
-                "message" => "Username already exists",
-                "debug" => $debugInfo
-            ));
-        } else {
-            $newUser = "$name,$username,$password\n";
-
-            if (fwrite($file, $newUser) === false) {
-                $debugInfo[] = "Error writing to logins.txt file.";
-                echo json_encode(array(
-                    "status" => "error",
-                    "message" => "Error writing to logins.txt file.",
-                    "debug" => $debugInfo
-                ));
-            } else {
-                $_SESSION['isLoggedIn'] = true;
-                $_SESSION['username'] = $username;
-                $debugInfo[] = "User '$username' successfully registered.";
-                echo json_encode(array(
-                    "status" => "success",
-                    "username" => $username,
-                    "message" => "Registration successful!",
-                    "debug" => $debugInfo
-                ));
-            }
-        }
-
-        fclose($file);
-
-    } else {
-        // Default action (e.g., login)
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        $debugInfo = array();
-
-        // Open the file for reading
-        $file = fopen("logins.txt", "r");
-
-        if ($file === false) {
-            $debugInfo[] = "Error opening the logins.txt file.";
-            echo json_encode(array("status" => "error", "message" => "Error opening the logins.txt file.", "debug" => $debugInfo));
-            exit;
-        } else {
-            $debugInfo[] = "Opened logins.txt successfully for reading.";
-        }
-
-        $loggedIn = false;
-
-        // Check each line in the file
-        while (($line = fgets($file)) !== false) {
-            list($storedName, $storedUsername, $storedPassword) = explode(",", trim($line));
-            
-            // Add debug information
-            $debugInfo[] = "Checking credentials: $storedUsername, $storedPassword";
-            
-            if ($username == $storedUsername && $password == $storedPassword) {
-                $_SESSION['isLoggedIn'] = true;
-                $_SESSION['username'] = $username;
-                $loggedIn = true;
-                $debugInfo[] = "Login successful for user '$username'.";
-                break;
-            }
-        }
-
-        fclose($file);
-
-        if ($loggedIn) {
-            echo json_encode(array(
-                "status" => "success",
-                "username" => $username,
-                "message" => "Login successful!",
-                "debug" => $debugInfo
-            ));
-        } else {
-            $debugInfo[] = "Invalid username or password.";
-            echo json_encode(array(
-                "status" => "error",
-                "message" => "Invalid username or password",
-                "debug" => $debugInfo
-            ));
+    // check each line in the file
+    while (($line = fgets($file)) !== false) { // read each line from the file
+        list($storedUsername, $storedPassword) = explode(",", trim($line)); // split the line into username and password using comma as the delimiter
+        
+        // add debug information
+        $debugInfo[] = "checking credentials: $storedUsername, $storedPassword"; // add debug information about the credentials being checked
+        
+        if ($username == $storedUsername && $password == $storedPassword) { // check if the provided username and password match the stored credentials
+            $_SESSION['isLoggedIn'] = true; // set the 'isLoggedIn' session variable to true
+            $_SESSION['username'] = $username; // set the 'username' session variable to the provided username
+            $loggedIn = true; // set the 'loggedIn' variable to true
+            break; // exit the loop since the credentials are valid
         }
     }
-} else {
-    echo json_encode(array(
-        "status" => "error",
-        "message" => "Invalid request method",
-        "debug" => array("Expected POST method.")
-    ));
+
+    fclose($file); // close the file
+
+    if ($loggedIn) { // check if the user is logged in
+        echo json_encode(array(
+            "status" => "success",
+            "username" => $username,
+            "message" => "login successful!",
+            "debug" => $debugInfo
+        )); // return a success response with the username and debug information
+    } else {
+        $debugInfo[] = "invalid username or password."; // add debug information
+        echo json_encode(array(
+            "status" => "error",
+            "message" => "invalid username or password",
+            "debug" => $debugInfo
+        )); // return an error response with debug information
+    }
 }
 ?>

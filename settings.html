@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- the document type declaration and the opening tag of the html document -->
+    <meta charset="UTF-8" />
+    <!-- specifies the character encoding for the document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- sets the viewport width and initial zoom level -->
+    <title>Settings - Invtrack</title>
+    <!-- sets the title of the webpage -->
+    <link rel="stylesheet" href="settings.css" />
+    <!-- links an external css file for styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <!-- links an external css file for font awesome icons -->
+    <link rel="stylesheet" href="sidebar.css" />
+    <!-- links an external css file for sidebar styling -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
+    />
+    <!-- links an external css file for google fonts -->
+  </head>
+  <body>
+    <div class="sidebar"></div>
+    <!-- empty div element for the sidebar -->
+
+    <nav>
+      <!-- navigation section -->
+      <div id="green-square"></div>
+      <!-- empty div element with an id for styling purposes -->
+      <ul>
+        <!-- unordered list for navigation links -->
+        <li>
+          <!-- list item -->
+          <a href="home.html" id="home" class="nav-button"
+            ><i class="fas fa-home icon"></i>home</a
+          >
+          <!-- anchor tag for the "home" link with font awesome icon -->
+        </li>
+        <li>
+          <!-- list item -->
+          <a href="tracking.html" id="tracking" class="nav-button"
+            ><i class="fas fa-chart-line icon"></i>tracking</a
+          >
+          <!-- anchor tag for the "tracking" link with font awesome icon -->
+        </li>
+        <li>
+          <!-- list item -->
+          <a href="settings.html" id="settings" class="nav-button"
+            ><i class="fas fa-cog icon"></i>settings</a
+          >
+          <!-- anchor tag for the "settings" link with font awesome icon -->
+        </li>
+        <li class="auth-buttons">
+          <!-- list item with a class for styling purposes -->
+          <span id="auth-status">
+            <!-- span element with an id for styling purposes -->
+            <a id="signin" href="login.html" class="nav-button">sign in</a>
+            <!-- anchor tag for the "sign in" link -->
+          </span>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="content">
+      <!-- div element with an id for styling purposes -->
+      <div class="settings-container">
+        <!-- div element with a class for styling purposes -->
+        <h1>Settings</h1>
+        <!-- heading element for the "settings" title -->
+        <div class="setting-item">
+          <!-- div element with a class for styling purposes -->
+          <label for="dark-mode-toggle">dark mode (beta):</label>
+          <!-- label for the dark mode toggle checkbox -->
+          <input type="checkbox" id="dark-mode-toggle" />
+          <!-- checkbox input for enabling dark mode -->
+        </div>
+        <div class="setting-item">
+          <!-- div element with a class for styling purposes -->
+          <label>current date and time:</label>
+          <!-- label for displaying the current date and time -->
+          <span id="date-time"></span>
+          <!-- span element with an id for displaying the date and time dynamically -->
+        </div>
+        <div class="setting-item">
+          <!-- div element with a class for styling purposes -->
+          <label>version:</label>
+          <!-- label for displaying the version number -->
+          <span>26-06-24</span>
+          <!-- span element for displaying the version number -->
+        </div>
+      </div>
+    </div>
+
+    <script src="settings.js"></script>
+    <!-- script tag for linking an external javascript file -->
+  </body>
+</html>

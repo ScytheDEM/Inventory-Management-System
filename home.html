@@ -1,58 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- the character encoding and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- the title of the webpage -->
     <title>Invtrack</title>
+    <!-- link to the home.css file -->
     <link rel="stylesheet" href="home.css" />
+    <!-- link to the Font Awesome CSS file -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
+    <!-- link to the sidebar.css file -->
     <link rel="stylesheet" href="sidebar.css" />
+    <!-- link to the Space Grotesk font from Google Fonts -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
     />
   </head>
   <body>
+    <!-- the sidebar container -->
     <div class="sidebar"></div>
 
+    <!-- the navigation bar -->
     <nav>
+      <!-- the green square element -->
       <div id="green-square"></div>
+      <!-- the unordered list of navigation items -->
       <ul>
+        <!-- the home navigation item -->
         <li>
           <a href="home.html" id="home" class="nav-button">
+            <!-- the home icon -->
             <i class="fas fa-home icon"></i>home</a
           >
         </li>
+        <!-- the tracking navigation item -->
         <li>
           <a href="tracking.html" id="tracking" class="nav-button">
+            <!-- the tracking icon -->
             <i class="fas fa-chart-line icon"></i>tracking</a
           >
         </li>
+        <!-- the settings navigation item -->
         <li>
           <a href="settings.html" id="settings" class="nav-button">
+            <!-- the settings icon -->
             <i class="fas fa-cog icon"></i>settings</a
           >
         </li>
+        <!-- the authentication buttons container -->
         <li class="auth-buttons">
           <span id="auth-status">
+            <!-- the sign in button -->
             <a id="signin" href="login.html" class="nav-button">Sign In</a>
           </span>
         </li>
       </ul>
     </nav>
 
+    <!-- the content container -->
     <div id="content">
+      <!-- the welcome text section -->
       <div class="welcome-text">
+        <!-- the heading -->
         <h1>Welcome to the future of inventory tracking</h1>
+        <!-- the "learn more" button -->
         <a href="learnmore.html" class="learn-more-button">
           learn more <i class="fas fa-arrow-right"></i>
         </a>
       </div>
     </div>
 
+    <!-- the JavaScript file for the home page -->
     <script src="home.js"></script>
   </body>
 </html>

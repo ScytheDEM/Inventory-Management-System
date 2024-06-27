@@ -1,0 +1,145 @@
+body {
+    font-family: 'Space Grotesk', sans-serif; /* sets the font family for the body */
+    margin: 0; /* removes the default margin */
+    padding: 0; /* removes the default padding */
+    background-color: #f0f0f0; /* sets the background color */
+    overflow-x: hidden; /* hides horizontal overflow */
+}
+
+nav {
+    background-color: #f0f0f0; /* sets the background color for the navigation bar */
+    border-radius: 20px; /* adds rounded corners to the navigation bar */
+    margin-bottom: 20px; /* adds margin at the bottom of the navigation bar */
+    overflow: hidden; /* hides overflow content */
+    padding: 10px; /* adds padding to the navigation bar */
+    position: fixed; /* fixes the position of the navigation bar */
+    top: 10px; /* sets the top position of the navigation bar */
+    left: 50%; /* sets the left position of the navigation bar */
+    transform: translateX(-50%); /* centers the navigation bar horizontally */
+    width: calc(100% - 240px); /* sets the width of the navigation bar */
+    z-index: 2; /* sets the stacking order of the navigation bar */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3); /* adds a box shadow to the navigation bar */
+    display: flex; /* displays the navigation bar as a flex container */
+    align-items: center; /* centers the items vertically in the navigation bar */
+}
+
+#green-square {
+    position: absolute; /* sets the position of the green square */
+    top: 0; /* sets the top position of the green square */
+    left: 0; /* sets the left position of the green square */
+    background-color: #4CAF50; /* sets the background color of the green square */
+    width: 110px; /* sets the width of the green square */
+    height: 100%; /* sets the height of the green square */
+    border-radius: 20px 0 0 20px; /* adds rounded corners to the green square */
+    z-index: 1; /* sets the stacking order of the green square */
+}
+
+nav ul {
+    list-style-type: none; /* removes the default list style */
+    margin: 0; /* removes the default margin */
+    padding: 0; /* removes the default padding */
+    display: flex; /* displays the list items as a flex container */
+    margin-left: 120px; /* adds margin to the left of the list items */
+    align-items: center; /* centers the items vertically in the list */
+    height: 100%; /* sets the height of the list */
+}
+
+nav ul li {
+    padding: 10px; /* adds padding to the list items */
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* removes the margin from the first list item */
+}
+
+nav ul li a {
+    text-decoration: none; /* removes the underline from the links */
+    color: #555; /* sets the color of the links */
+    display: flex; /* displays the links as a flex container */
+    align-items: center; /* centers the items vertically in the links */
+    font-size: 13px; /* sets the font size of the links */
+    font-family: 'Roboto', sans-serif; /* sets the font family of the links */
+    font-weight: 500; /* sets the font weight of the links */
+    position: relative; /* sets the position of the links */
+}
+
+.nav-button:hover::after {
+    content: ''; /* adds content after the link on hover */
+    position: absolute; /* sets the position of the content */
+    top: 50%; /* sets the top position of the content */
+    left: 50%; /* sets the left position of the content */
+    transform: translate(-50%, -50%); /* centers the content horizontally and vertically */
+    width: calc(100% + 20px); /* sets the width of the content */
+    height: calc(100% + 10px); /* sets the height of the content */
+    background-color: rgba(255, 255, 255, 0.2); /* sets the background color of the content */
+    border-radius: 20px; /* adds rounded corners to the content */
+    animation: glow 1s infinite alternate; /* applies the glow animation to the content */
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 10px 2px #4CAF50; /* sets the initial box shadow */
+    }
+    to {
+        box-shadow: 0 0 20px 6px #4CAF50; /* sets the final box shadow */
+    }
+}
+
+.auth-buttons {
+    margin-left: auto; /* aligns the buttons to the right */
+    padding-left: 1100px; /* adds padding to the left of the buttons */
+}
+
+#content {
+    padding: 20px; /* adds padding to the content */
+    margin-left: 240px; /* adds margin to the left of the content */
+}
+
+.auth-buttons a {
+    color: #555; /* sets the color of the buttons */
+    text-decoration: none; /* removes the underline from the buttons */
+    padding: 10px 20px; /* adds padding to the buttons */
+    border-radius: 20px; /* adds rounded corners to the buttons */
+    background-color: #4CAF50; /* sets the background color of the buttons */
+}
+
+.auth-buttons a:hover {
+    background-color: #45a049; /* sets the background color of the buttons on hover */
+}
+
+.sidebar {
+    background-color: rgb(60, 78, 178); /* sets the background color of the sidebar */
+    width: 220px; /* sets the width of the sidebar */
+    height: calc(100vh - 10px); /* sets the height of the sidebar */
+    position: fixed; /* fixes the position of the sidebar */
+    top: 0; /* sets the top position of the sidebar */
+    left: 0; /* sets the left position of the sidebar */
+    z-index: 1; /* sets the stacking order of the sidebar */
+}
+
+.settings-container {
+    margin-top: 100px; /* adds margin to the top of the settings container */
+    text-align: center; /* centers the content horizontally in the settings container */
+}
+
+.setting-item {
+    margin: 20px 0; /* adds margin to the setting items */
+    font-size: 18px; /* sets the font size of the setting items */
+}
+
+.dark-mode {
+    background-color: #333; /* sets the background color for dark mode */
+    color: #fff; /* sets the text color for dark mode */
+}
+
+.dark-mode nav {
+    background-color: #444; /* sets the background color for the navigation bar in dark mode */
+}
+
+.dark-mode .auth-buttons a {
+    background-color: #333; /* sets the background color for the buttons in dark mode */
+}
+
+.dark-mode .auth-buttons a:hover {
+    background-color: #222; /* sets the background color for the buttons on hover in dark mode */
+}

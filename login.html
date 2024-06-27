@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- The following meta tags define the character set and viewport settings -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- The title of the page -->
     <title>Login</title>
+    <!-- Linking the external CSS file for styling -->
     <link rel="stylesheet" href="login.css" />
+    <!-- Linking the Google Fonts CSS file for custom font styles -->
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap"
     />
   </head>
   <body>
+    <!-- The login container -->
     <div class="login-container" id="login-container">
+      <!-- Heading for the login section -->
       <h2>Login</h2>
+      <!-- The login form -->
       <form id="login-form" class="neumorphic-form">
+        <!-- Form group for the username field -->
         <div class="form-group">
           <label for="username">Username</label>
           <input type="text" id="username" name="username" required />
         </div>
+        <!-- Form group for the password field -->
         <div class="form-group">
           <label for="password">Password</label>
           <input type="password" id="password" name="password" required />
         </div>
+        <!-- The login button -->
         <button type="submit">Login</button>
       </form>
+      <!-- Message for users who don't have an account -->
       <p>
         Don't have an account?
+        <!-- Link to the registration section -->
         <a href="#" id="register-link" onclick="navigateToRegister()"
           >Register here</a
         >
       </p>
     </div>
 
+    <!-- The registration container -->
     <div class="login-container" id="register-container" style="display: none">
+      <!-- Heading for the registration section -->
       <h2>Register</h2>
+      <!-- The registration form -->
       <form id="register-form" class="neumorphic-form">
+        <!-- Form group for the name field -->
         <div class="form-group">
           <label for="new-name">Name</label>
           <input type="text" id="new-name" name="name" required />
         </div>
+        <!-- Form group for the username field -->
         <div class="form-group">
           <label for="new-username">Username</label>
           <input type="text" id="new-username" name="username" required />
         </div>
+        <!-- Form group for the password field -->
         <div class="form-group">
           <label for="new-password">Password</label>
           <input type="password" id="new-password" name="password" required />
         </div>
+        <!-- The registration button -->
         <button type="submit">Register</button>
       </form>
+      <!-- Message for users who already have an account -->
       <p>
         Already have an account?
+        <!-- Link to the login section -->
         <a href="#" id="login-link" onclick="navigateToLogin()">Login here</a>
       </p>
     </div>
 
+    <!-- Including the JavaScript file for additional functionality -->
     <script src="login.js"></script>
   </body>
 </html>
+</div>
